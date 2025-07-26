@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayang! 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars"></div>
+
+    <!-- Cover Page -->
+    <div class="cover-page" id="coverPage">
+        <div class="floating-hearts"></div>
+        <div class="cover-content">
+            <h1 class="cover-title">Sesuatu yang Spesial Menunggu... 💕</h1>
+            <p class="cover-subtitle">Kejutan ulang tahun untuk orang tersayang</p>
+            
+            <div class="countdown-container">
+                <h2 class="countdown-title">Countdown to Your Special Day</h2>
+                <div class="countdown-timer" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">Hari</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Jam</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Menit</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Detik</span>
+                    </div>
+                </div>
+                <div class="waiting-message" id="waitingMessage">
+                    Sabar ya sayang, kejutannya akan terbuka di hari spesialmu! ✨
+                </div>
+            </div>
+
+            <div class="birthday-message">
+                <h3>Untuk Kamu yang Tersayang 💖</h3>
+                <p>Aku sudah mempersiapkan sesuatu yang istimewa untuk hari spesialmu. Website ini berisi semua kenangan indah kita, ucapan spesial, dan kejutan yang sudah lama aku siapkan. Tapi... kamu harus menunggu sampai tanggal 27 ya! Pasti worth it kok, trust me! 😘</p>
+            </div>
+
+            <button class="unlock-btn" id="unlockBtn" onclick="unlockWebsite()">
+                🎉 Buka Kejutan Sekarang! 🎁
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Website (Hidden initially) -->
+    <div class="main-website" id="mainWebsite">
+        <!-- Music Control -->
+        <div class="music-control" onclick="toggleMusic()">
+            <span id="music-icon">🎵</span>
+        </div>
+
+        <!-- Audio -->
+        <audio id="background-music" loop>
+            <source src="audio/v4.www-y2mate.blog - Payung Teduh - Untuk Perempuan Yang Sedang Di Pelukan (320 KBps).m4a" type="audio/mpeg">
+        </audio>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Happy Birthday Sayang! 🎉</h1>
+                <p>Untuk orang tersayang yang selalu membuat hariku cerah ✨</p>
+                <div class="hero-image">
+                    <img src="img/loveAll.png" alt="Me and You">
+                </div>
+                <p>Hari spesialmu telah tiba, dan aku ingin membuat hari ini tak terlupakan</p>
+            </div>
+        </section>
+
+        <!-- Love Story Section -->
+        <section class="section">
+            <h2>Our Love Story</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Pertama Bertemu 💫</div>
+                        <p>Hari dimana takdir mempertemukan kita. Saat pertama mengenalmu, aku tahu ada yang berbeda. Senyummu yang manis pada masa smp itu langsung mencuri perhatianku.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Chat Pertama di FB 💌</div>
+                        <p>Mulai bertukar pesan, berbagi cerita, dan mengenal satu sama lain. Setiap notifikasi pesanmu selalu membuatku tersenyum tanpa sadar.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Kencan Pertama 🌹</div>
+                        <p>Ya yang selalu kita inginkan, tapi apa daya kencan pertama hanya melalui hp doang, pejuang LDR...Semangat!!!</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jadian 💖</div>
+                        <p>Hari spesial dalam hidupku. Saat kau bilang "iya" ketika aku menyatakan perasaan. Dari hari itu, kita resmi menjadi sepasang kekasih, cielah kiw kiw kiw....</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sampai Sekarang 🌟</div>
+                        <p>Perjalanan indah yang terus berlanjut. Setiap hari bersamamu adalah hadiah. Kita tertawa bersama, dan tumbuh bersama.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Wishes Section -->
+        <section class="section wishes">
+            <h2>Birthday Wishes For You</h2>
+            <div class="video-container">
+                <div style="background: rgba(255,255,255,0.2); height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                    <video width="100%" height="300" controls>
+                        <source src="video/ytdl.canehill.info - VIDEO UCAPAN ULANG TAHUN DI JAMIN BIKIN BAPER (1080p).mp4" type="video/mp4">
+                        Browser kamu tidak mendukung pemutar video.
+                    </video>
+                </div>
+            </div>
+            <div class="wish-text">
+                "Di hari spesialmu ini, aku ingin kau tahu betapa berartinya kamu dalam hidupku. 
+                Kamu adalah matahari yang menerangi hariku, bulan yang menemani malamku, 
+                dan bintang yang memandu jalanku. Semoga di usia yang baru ini, 
+                semua impianmu terwujud, kesehatan selalu menyertaimu, 
+                dan kebahagiaan tak pernah lepas dari senyummu. 
+                I love you more than words can express. Happy Birthday, my love! 💕"
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section">
+            <h2>Our Beautiful Memories</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openGallery(1)">
+                    <img src="img/love.jpeg" alt="Foto 1">
+                </div>
+                <div class="gallery-item" onclick="openGallery(2)">
+                    <img src="img/myGF.jpeg" alt="Foto 2">
+                </div>
+                <div class="gallery-item" onclick="openGallery(3)">
+                    <img src="img/myGirl.jpeg" alt="Foto 3">
+                </div>
+                <div class="gallery-item" onclick="openGallery(4)">
+                    <img src="img/myLove.jpeg" alt="Foto 4">
+                </div>
+                <div class="gallery-item" onclick="openGallery(5)">
+                    <img src="img/me&you.png" alt="Foto 5">
+                </div>
+                <div class="gallery-item" onclick="openGallery(6)">
+                    <img src="img/manis.jpeg" alt="Foto 6">
+                </div>
+            </div>
+            <p style="text-align: center; color: #666; margin-top: 1rem;">
+                Klik untuk melihat kenangan indah kita bersama
+            </p>
+        </section>
+
+        <!-- Surprise Section -->
+        <section class="surprise-section">
+            <h2>Ada Kejutan Untukmu!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Aku punya sesuatu yang spesial... tapi hanya akan muncul kalau kamu klik tombol di bawah ini 😉
+            </p>
+            <button class="surprise-btn" onclick="showSurprise()">
+                Klik untuk kejutan nya sayangku... ❤️
+            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3>I Love You More Than Words</h3>
+            <p>Terima kasih sudah menjadi bagian terpenting dalam hidupku</p>
+            <p>Happy Birthday, My Beautiful Queen! 👑💖</p>
+            <div style="margin-top: 2rem;">
+                <span style="font-size: 2rem;">💕 Keti Fitra Ilahi 💕</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="surpriseModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSurprise()">&times;</span>
+            <h3>Surprise! 🎉</h3>
+            <img src="img/loveAll.png" alt="Gift" class="circle-img">
+            <p>
+                Aku sudah menyiapkan hadiah spesial untukmu! Tapi itu harus diambil langsung dari aku ya...
+                Kamu mau kan? 😘 Tapi bersabar ya...
+            </p>
+            <div class="emoji">🎁💝🎀</div>
+            <p class="love-text">
+                PS: Aku sayang kamu banget! ❤️
+            </p>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
